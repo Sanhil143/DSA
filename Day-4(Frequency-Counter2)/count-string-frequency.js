@@ -20,7 +20,7 @@
       for(let s of str1){
             map.set(s,(map.get(s) || 0) +1 )
       }
-      
+      return map
  }
- countFreq(str)
+ console.log(countFreq(str))
  

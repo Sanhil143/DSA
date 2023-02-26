@@ -28,6 +28,6 @@ const countFreq = (s) => {
       let freq = arr.map(([str,f])=>{
             return str.repeat(f)
       }).join('')
-      console.log(freq);
+      return freq;
 }
 countFreq(s)
