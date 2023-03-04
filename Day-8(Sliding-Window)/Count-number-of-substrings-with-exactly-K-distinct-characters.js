@@ -23,7 +23,8 @@ const countString = (str,k) => {
       const arr=new Array(26);
       var cnt=0;
       for(var i=0;i<str.length;i++){
-         var temp=0;arr.fill(0);
+         var temp=0;
+         arr.fill(0);
          for(var j=i;j<str.length;j++){
             if(arr[str.charCodeAt(j)-97]==0)++temp;
             arr[str.charCodeAt(j)-97]++;

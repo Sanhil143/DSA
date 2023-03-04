@@ -1,5 +1,6 @@
 // Distance between two closest minimum
-// Given an array of integers, find the minimum distance between any two occurrences of the minimum integer in the array.
+// Given an array of integers, find the minimum distance between any two occurrences of the minimum 
+// integer in the array.
 
 
 
