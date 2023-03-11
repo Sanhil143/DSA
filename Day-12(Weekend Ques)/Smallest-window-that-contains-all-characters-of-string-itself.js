@@ -21,7 +21,8 @@ function solution(str) {
         let i=0;
         let j=0;
         let map=new Map()
-        let len=10000000000000000000000;
+        // let len=10000000000000000000000;
+        let len=Number.MAX_VALUE;
         let set =new Set();
         for(let i=0;i<str.length ;i++){
             set.add(str[i]);
