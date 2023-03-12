@@ -57,4 +57,4 @@ const fruits = (arr) => {
       }
       return maxLength
 }
-console.log(fruits(arr));
+
