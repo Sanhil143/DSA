@@ -15,7 +15,7 @@
 // If the length of the given string is ODD then ignore the middle element.
 
 
-let s = "abcbac"
+let s = "abcaabbc"
 
 const checkString = (s) => {
       let n = s.length
