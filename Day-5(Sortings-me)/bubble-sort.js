@@ -16,11 +16,14 @@ let arr = [0, 2, 1, 2, 0]
 const sortArray = (arr) => {
       for (let i = 0; i < arr.length; i++) {
             for (let j = i+1; j < arr.length; j++) {
-                  let temp = 0
+                  // let temp = 0
                   if (arr[i] > arr[j]) {
-                        temp = arr[i]
-                        arr[i] = arr[j]
-                        arr[j] = temp
+                        // temp = arr[i]
+                        // arr[i] = arr[j]
+                        // arr[j] = temp
+                        arr[i] = arr[i] + arr[j]
+                        arr[j] = arr[i] - arr[j]
+                        arr[i] = arr[i] - arr[j]
                   }
             }
             
