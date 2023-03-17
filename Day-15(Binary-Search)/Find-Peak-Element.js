@@ -24,7 +24,7 @@
 // Output: 5
 // Explanation: Your function can return either index number 1 where the peak element is 2, 
 // or index number 5 where the peak element is 6.
-
+let nums = [1,2,1,3,5,6,4]
 var findPeakElement = function(nums) {
       let n = nums.length
       let i=0
@@ -40,3 +40,4 @@ var findPeakElement = function(nums) {
           }
       }return i;
   };
+  console.log(findPeakElement(nums));
