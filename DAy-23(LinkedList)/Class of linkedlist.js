@@ -1,23 +1,59 @@
 
-// simple print lists
 
-class List{
-      constructor(data){
-            this.head = {
-                  value:data,
-                  next:null
-            }
-            this.tail = this.head
+
+
+class Node {
+      constructor(value) {
+            this.value = value;
+            this.next = null;
+      }
+}
+
+class LinkedList {
+      constructor(){
+            this.head = null;
+            this.size = 0
       }
 
-      
+      isEmpty(){
+            return this.size === 0;
+      }
+
+      //check size
+      getSize(){
+            return this.size;
+      }
+
+      addFirst(value){
+            const node = new Node(value)
+            if(this.isEmpty()){
+                  this.head = node;
+            }else{
+                  node.next = this.head;
+                  this.head = node;
+            }
+            this.size++
+      }
+      addLast(value){
+            const node = new Node(value)
+            if(this.isEmpty()){
+                  this.head = node;
+            }else{
+                  let lastNode = this.head;
+                  while(lastNode.next){
+                        lastNode = lastNode.next;
+                  }
+                  lastNode.next = node;
+            }
+            this.size++
+      }
 
 }
-let arr = 10
-const nodes = new List(arr)
-nodes.display(15)
-      
-console.log(nodes);
 
-
+let ll = new LinkedList()
+ll.addFirst(7)
+ll.addLast(27)
+console.log(ll);
+// console.log(ll.isEmpty());
+// console.log(ll.getSize());
 
