@@ -79,4 +79,3 @@ ll.addMid(27,2)
 console.log(ll);
 // console.log(ll.isEmpty());
 // console.log(ll.getSize());
-
