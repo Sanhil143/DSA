@@ -49,6 +49,7 @@ let arr = [1,2,3,4,5]
 for(let i=0; i<arr.length; i++){
       stack.add(arr[i])
 }
+console.log(stack);
 console.log(stack.remove());
 console.log(stack.isFull());
 console.log(stack.isEmpty());
