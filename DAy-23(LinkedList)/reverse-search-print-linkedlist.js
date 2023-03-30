@@ -80,4 +80,5 @@ for(let i=0; i<arr.length; i++){
 }
 console.log(ll.print()); //66 55 44 33 22 
 // console.log(ll.reverseNode() + ll.print()); //[object Object]22 33 44 55 66 
-// console.log(ll.reverseNode() + ll.searchNode(1)); //[object Object]-1
+// console.log(ll.reverseNode() + ll.searchNode(1)); //[object Object]-1 
+ //Sanhil Rai
