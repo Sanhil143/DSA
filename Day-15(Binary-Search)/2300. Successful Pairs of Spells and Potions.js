@@ -9,7 +9,7 @@
 // Return an integer array pairs of length n where pairs[i] is the number of potions that will form a 
 // successful pair with the ith spell.
 
- 
+
 
 // Example 1:
 
@@ -31,25 +31,52 @@
 // - 2nd spell: 2 * [8,5,8] = [16,10,16]. 2 pairs are successful. 
 // Thus, [2,0,2] is returned.
 
-let spells = [3,1,2], potions = [8,5,8], success = 16
+let spells = [3, 1, 2], potions = [8, 5, 8], success = 16
 
-const func = (spells,potions,success) => {
-      //Brute Force Sol
+//Brute Force Sol
+// const func = (spells,potions,success) => {
+//       let arr = [];
+//       let temp = 0;
+//       let count = 0;
+
+//       for(let i=0; i<spells.length; i++){
+//             for(let j=0; j<potions.length; j++){
+//                   temp = spells[i]*potions[j];
+//                   if(temp >= success){
+//                         count++;
+//                   }
+//                   temp = 0;
+//             }
+//             arr.push(count)
+//             count = 0
+//       }
+//       return arr;
+// }
+// console.log(func(spells,potions,success));
+
+//Efficient approach
+const func = (spells, potions, success) => {
+      potions.sort((a, b) => a - b);
       let arr = [];
-      let temp = 0;
-      let count = 0;
 
-      for(let i=0; i<spells.length; i++){
-            for(let j=0; j<potions.length; j++){
-                  temp = spells[i]*potions[j];
-                  if(temp >= success){
-                        count++;
+      let n = potions.length;
+
+      for (let i = 0; i < spells.length; i++) {
+            let start = 0;
+            let end = potions.length - 1;
+            let index = n;
+
+            while (start <= end) {
+                  let mid = start + Math.floor((end - start) / 2)
+                  if (potions[mid] * spells[i] >= success) {
+                        index = mid;
+                        end = mid - 1;
+                  } else {
+                        start = mid + 1;
                   }
-                  temp = 0;
             }
-            arr.push(count)
-            count = 0
+            arr.push(n - index);
       }
-      return arr;
+      return arr
 }
-console.log(func(spells,potions,success));
+console.log(func(spells, potions, success));
