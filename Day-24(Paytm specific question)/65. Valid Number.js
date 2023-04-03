@@ -39,6 +39,7 @@ let s = "e";
 // Output: false
 
 const func = (s) => {
-      return (!isNaN(s)) && (s.trim() !== "") && (!s.includes("Infinity"))
+      // return (!isNaN(s)) && (s.trim() !== "") && (!s.includes("Infinity"))
+      return !isNaN(s) && s.trim() !== '';
 }
 console.log(func(s));
