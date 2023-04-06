@@ -13,7 +13,7 @@
 // Value of N can be in the range from [0 to 20]
 
 //Recursive
-let n = 5
+let n = 4
 
 const recursiveFactorial = (n) => {
       if(n<=0){
