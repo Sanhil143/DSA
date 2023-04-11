@@ -23,8 +23,8 @@
 // Input: s = "(]"
 // Output: false
 
-let s = "([{}])";
-// Output: true
+let s = "(]"
+// Output: false
 
 const func = (s) => {
 
@@ -32,20 +32,19 @@ const func = (s) => {
       let stack = [];    //we use stack like array but ignore all the array methods except push or pop
 
       for(let i=0; i<s.length; i++){
-            if(s[i] === '(' || s[i] === '[' || s[i] === '{'){
-                  stack.push(s[i]);
+            if(s[i] == '(' || s[i] =='{' || s[i] == '['){
+                  stack.push(s[i])
             }
             else{
-                  if(s[i] === ')' && stack[stack.length-1] === '(' ||
-                  s[i] === ']' && stack[stack.length-1] === '[' ||
-                  s[i] === '}' && stack[stack.length-1] === '{'){
-                        stack.pop(s[i]);
-                  }
-                  else{
+                  if(s[i] == ')' && stack[stack.length-1] === '(' ||
+                  s[i] == '}' && stack[stack.length-1] === '{' || 
+                  s[i] == ']' && stack[stack.length-1] === '['){
+                        stack.pop(s[i])
+                  }else{
                         return false;
                   }
             }
       }
-      return stack.length === 0;
+      return stack.length == 0
 }
 console.log(func(s));
