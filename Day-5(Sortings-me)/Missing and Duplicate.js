@@ -19,3 +19,22 @@
 // }
 // console.log(func(arr));
 
+// let x=10;
+// const func1 = () => {
+//       y = 20
+//       console.log(x);
+//       var x = 10
+// }
+// const func2 = () => {
+//       console.log(y);
+// }
+
+// func1()
+// func2()
+
+var x = 10
+const func = () => {
+  console.log(x);
+  var  x = 20
+}
+func()
