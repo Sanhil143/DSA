@@ -40,3 +40,8 @@ const func = (pushed,popped) => {
       return stack.length === 0 ? true : false;
 } 
 console.log(func(pushed,popped));
+
+
+
+
+
