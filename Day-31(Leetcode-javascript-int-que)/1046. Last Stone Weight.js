@@ -31,6 +31,7 @@
 let stones = [2,7,4,1,8,1];
 // Output: 1
 
+
 const func = (s) => {
       while(s.length > 1){
             s.sort((a,b) => b-a);
@@ -40,3 +41,6 @@ const func = (s) => {
       return s[0];
 }
 console.log(func(stones));
+
+
+
