@@ -1,39 +1,6 @@
-// Queue
-class Queue {
-      constructor(value) {
-            this.item = [],
-                  this.size = 10;
-      }
 
-      enqueue(value) { //addElement
-            return this.item.push(value);
-      }
-      dequeue() { //removeElement
-            if (this.item.length > 0) {
-                  return this.item.shift();
-            }
-      }
-      peekElement() {
-            return this.item[0];
-      }
-      isEmpty() {
-            return this.item === 0;
-      }
-      isFull() {
-            return this.item.length === this.size;
-      }
-      getSize() {
-            return this.size;
-      }
-      clear() {
-            this.item = [];
-      }
-
-}
-
-
-// Breadth first search
-
+// Breadth first search (BFS) algorithm
+ 
 bfs(startingNode)
 {
 
