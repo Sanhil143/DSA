@@ -2,7 +2,7 @@
 // Queue Class
 
 class Queue {
-      constructor(value) {
+      constructor() {
             this.item = [],
                   this.size = 10;
       }
@@ -19,7 +19,7 @@ class Queue {
             return this.item[0];
       }
       isEmpty() {
-            return this.item === 0;
+            return this.item.length === 0;
       }
       isFull() {
             return this.item.length === this.size;
@@ -86,8 +86,10 @@ class Graph {
             }
       }
 
+      // ------------------------------ <^> -----------------------------------------
+
       //BFS function
-      BFS(startingNode){
+      bfs(startingNode){
 
             var visited = {};
             var queue = new Queue();
@@ -96,7 +98,7 @@ class Graph {
             queue.addElement(startingNode);
 
             //loop untill queue is empty
-            while(queue.length > 0){
+            while(!queue.isEmpty()){
                   //get the element from the queue
                   var getQueueElement = queue.removeElement()
 
@@ -117,6 +119,31 @@ class Graph {
                               queue.addElement(neigh);
                         }
                   }
+            }
+      }
+
+      // ------------------------------------- <^> ---------------------------------------
+
+      
+      //DFS function
+      dfs(startingNode)
+      {
+            let visited = {};
+
+            this.DFS(startingNode, visited);
+      }
+
+      DFS(vert,visited)
+      {
+            visited[vert] = true;
+            console.log(vert);
+
+            let get_neigh = this.AdjList.get(vert);
+
+            for(let i in get_neigh){
+                  let get_elem = get_neigh[i];
+                  if(!visited[get_elem])
+                  this.DFS(get_elem,visited)
             }
       }
 }
@@ -145,7 +172,7 @@ graph.addEdge('EE','CC');
 
 
 //Print all vertex and its adjacency list
-graph.printGraph()
+// graph.printGraph()
 /**
 AA -> BB DD EE 
 BB -> AA CC 
@@ -153,3 +180,9 @@ CC -> BB EE
 DD -> AA EE 
 EE -> AA DD CC 
 */
+
+console.log('BFS');
+graph.bfs('AA')
+
+console.log('DFS');
+graph.dfs('AA')
