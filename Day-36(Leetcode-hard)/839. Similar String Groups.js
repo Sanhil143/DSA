@@ -28,6 +28,44 @@ let strs = ["tars","rats","arts","star"]
 // Output: 2
 
 const func = (strs) => {
+      let res = 0;
 
+      if(strs.length === 0){
+            return 0;
+      }
+      let visited = new Set();
+
+      for(let s of strs){
+            if(!visited.has(s)){
+                  dfs(s,strs,visited);
+                  res++;
+            }
+      }
+      return res;
+}
+const isSimilar = (str1,str2) => {
+      let count = 0;
+      for(let i=0; i<str1.length; i++){
+            if(str1[i] !== str2[i]){
+                  count++;
+
+                  if(count>2){
+                        return false;
+                  }
+            }
+      }
+      return true;
+}
+
+const dfs = (str,strArr,visited) => {
+      if(visited.has(str)){
+            return;
+      }
+      visited.add(str);
+      for(let i=0; i<strArr.length; i++){
+            if(isSimilar(str,strArr[i])){
+                  dfs(strArr[i],strArr,visited)
+            }
+      }
 }
 console.log(func(strs));
