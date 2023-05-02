@@ -18,3 +18,6 @@ const func = (n) => {
 }
 
 console.log(func(n));
+
+
+//TC: 2 to the power n
