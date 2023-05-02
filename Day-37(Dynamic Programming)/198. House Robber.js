@@ -40,3 +40,6 @@ const func = (nums) => {
 }
 
 console.log(func(nums));
+
+//TC : O(n)
+//SC: O(n)
