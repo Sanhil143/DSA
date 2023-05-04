@@ -1,4 +1,4 @@
-let arr = [-1]
+let arr = [1,2,3]
 let k = 2
 
 const reverse = (arr,i,j) => {
