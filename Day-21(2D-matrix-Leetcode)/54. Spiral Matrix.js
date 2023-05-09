@@ -52,4 +52,4 @@ const func = (matrix) => {
     }
     return res;
 }
-console.log(func(matrix));
+console.log(func(matrix)); //Completed
