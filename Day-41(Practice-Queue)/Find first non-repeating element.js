@@ -10,7 +10,24 @@
 // Input: {9, 4, 9, 6, 7, 4}
 // Output: 6
 
-const arr = [9, 4, 9, 6, 7, 4];
+
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Enter numbers separated by commas: ', (input) => {
+  const arr = input.split(',').map(Number);
+  console.log(uniqueFunc(arr));
+  rl.close();
+});
+
+
+
+
+
+// const arr = [9, 4, 9, 6, 7, 4];
 
 const uniqueFunc = (arr) => {
   const map = new Map();
@@ -25,4 +42,4 @@ const uniqueFunc = (arr) => {
 	return 'no unique element are there'
 };
 
-console.log(uniqueFunc(arr));
+// console.log(uniqueFunc(arr));
