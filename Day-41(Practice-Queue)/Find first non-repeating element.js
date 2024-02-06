@@ -1,7 +1,7 @@
 // Find first non-repeating element
 // Given an array of integers of size N, the task is to find the first non-repeating element in this array.
 
-// Examples:
+// Examples: 
 
 // Input: {-1, 2, -1, 3, 0}
 // Output: 2
